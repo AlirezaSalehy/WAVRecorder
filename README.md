@@ -14,15 +14,18 @@ The library has some components but the user interface component is <code>WAVRec
 #define SAMPLE_RATE 16000
 #define SAMPLE_LEN 8
 
+// Hardware SPI's CS pin which is different in each board
 #ifdef ESP8266 
   #define CS_PIN 16
 #elif ARDUINO_SAM_DUE
   #define CS_PIN 4
 #elif ESP32
   #define CS_PIN 5
-  #define MIC_PIN_1 34
-  #define MIC_PIN_2 35
 #endif
+
+// The analog pins (ADC inputs) which microphone outputs are connected to.
+#define MIC_PIN_1 34
+#define MIC_PIN_2 35
 
 #define NUM_CHANNELS 1
 channel_t channels[] = {{MIC_PIN_1}};
