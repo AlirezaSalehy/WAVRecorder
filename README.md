@@ -11,7 +11,7 @@ You should specify channels before being able to record, each channels is define
 There is other component in library to play recorded sound which is AudioSystem which is just a wrapper for cool [ESP8266Audio]https://github.com/earlephilhower/ESP8266Audio library.
 
 # Example using SD card and a single microphone (single channel)
-## Below is a simple example for recording for 3000 ms and playing it back repeatedly. 
+Below is a simple example for recording for 3000 ms and playing it back repeatedly. 
 ```cpp
 #include "src/WAVRecorder.h"
 #include "src/AudioSystem.h"
