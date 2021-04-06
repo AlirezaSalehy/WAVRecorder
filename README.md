@@ -7,7 +7,7 @@ The library has some components but the user interface component is <code>WAVRec
 
 # Example
 
-```arduino
+```cpp
 #include "src/WAVRecorder.h"
 #include "src/AudioSystem.h"
 
