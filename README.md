@@ -2,7 +2,7 @@
 Library for voice recording using Electret Microphones for ESP32, ESP8266 and Arduino Due.
 
 The library has some components but the user interface component is <code>WAVRecorder</code> class, two methods of the class are implemented until now for recording, <code>startBlocking(uint32_t time_ms)</code> and <code>startBlocking(SoundActivityDetector* sad_arg)</code>.
-<code>startBlocking(uint32_t time_ms)</code> records for specified amount of time in milliseconds. and the other one starts recording as soon as sound power exceeds specific threshold and stops recording as fall behind a specifi threshold.
+<code>startBlocking(uint32_t time_ms)</code> records for specified amount of time in milliseconds. and the other one starts recording as soon as sound power exceeds specific threshold and stops recording as fall behind a specific threshold.
 
 you can use SD card to store recording file which is a WAV. file. or you can use external flash if you're using ESP32 or ESP8266. The library is capable of stereo recording which is only possible if using ESP32 and DUE because ESP8266 has only one ADC input pin.
 
