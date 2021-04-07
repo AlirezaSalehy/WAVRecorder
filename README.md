@@ -102,6 +102,7 @@ void recordAndPlayBack() {
 
 # Schematic (Only for recording)
 
-![SD_Card_MIC_ESP32_Module](https://user-images.githubusercontent.com/49995349/113864691-7527f500-97c0-11eb-8b2c-52f717252f21.png)
+![ESP32_SD_MIC_Modules](https://user-images.githubusercontent.com/49995349/113865590-81608200-97c1-11eb-8358-1e5240453541.png)
 
-![SD_Card_MIC_ESP32](https://user-images.githubusercontent.com/49995349/113864699-78bb7c00-97c0-11eb-98b8-7b3f08c90e56.png)
+![ESP32_SD_MIC_Schematic](https://user-images.githubusercontent.com/49995349/113865596-8291af00-97c1-11eb-9c91-3bbae1eda749.png)
+
