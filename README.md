@@ -98,7 +98,7 @@ void recordAndPlayBack() {
     Serial.println("Playing file");
     as->playAudioBlocking(file_name); 
 }
-
+```
 
 # Schematic (Only for recording)
 
