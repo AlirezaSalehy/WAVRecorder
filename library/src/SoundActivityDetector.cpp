@@ -18,7 +18,7 @@ uint8_t ADCPin = 0;
 
 #if defined(ESP8266) || defined(ESP32)
 	void ICACHE_RAM_ATTR timerISR(void);
-#elif
+#else
 	void timerISR(void);
 #endif 
 
@@ -128,7 +128,7 @@ uint16_t SoundActivityDetector::getMinimumLengthNS() {
  
 #if defined(ESP8266) || defined(ESP32)
 	void ICACHE_RAM_ATTR timerISR(void){
-#elif
+#else
 	void timerISR(void){
 #endif 
 	
