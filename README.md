@@ -8,7 +8,7 @@ you can use SD card to store recording file which is a WAV. file. or you can use
 
 You should specify channels before being able to record, each channels is defined by ADC pin number which connected to MIC output. no need to say that for stereo recording you need to define two channels.
 
-There is other component in library to play recorded sound which is AudioSystem which is just a wrapper for cool [ESP8266Audio]https://github.com/earlephilhower/ESP8266Audio library.
+There is other component in library to play recorded sound which is AudioSystem which is just a wrapper for cool [ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio) library.
 
 # Example using SD card and a single microphone (single channel)
 Below is a simple example for recording for 3000 ms and playing it back repeatedly. 
