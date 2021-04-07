@@ -13,8 +13,12 @@ There is other component in library to play recorded sound which is AudioSystem 
 # Example using SD card and a single microphone (single channel)
 Below is a simple example for recording for 3000 ms and playing it back repeatedly. 
 ```cpp
+#include <SD.h>
+#include <SPI.h>
+
 #include "src/WAVRecorder.h"
 #include "src/AudioSystem.h"
+#include "src/SoundActivityDetector.h"
 
 #define SAMPLE_RATE 16000
 #define SAMPLE_LEN 8
@@ -38,6 +42,10 @@ channel_t channels[] = {{MIC_PIN_1}};
 char file_name[] = "/sample.wav";
 File dataFile;
 
+#if defined(ESP32) || defined(ESP8266)
+  AudioSystem* as;
+#endif
+WAVRecorder* wr;
 //SoundActivityDetector* sadet;
 
 void recordAndPlayBack();
@@ -61,7 +69,9 @@ void setup() {
   SPI.setClockDivider(SPI_CLOCK_DIV2); // This is becuase feeding SD Card with more than 40 Mhz, leads to unstable operation. 
                                        // (Also depends on SD class) ESP8266 & ESP32 SPI clock with no division is 80 Mhz.
 
-  as = new AudioSystem(CS_PIN);
+  #if defined(ESP32) || defined(ESP8266)
+     as = new AudioSystem(CS_PIN);
+  #endif
   //sadet = new SoundActivityDetector(channels[0].ADCPin, 2000, 10 * 512, 6 * 512, &Serial);
   wr = new WAVRecorder(12, channels, NUM_CHANNELS, SAMPLE_RATE, SAMPLE_LEN, &Serial);
 
@@ -96,7 +106,10 @@ void recordAndPlayBack() {
     Serial.println("File Created");
 
     Serial.println("Playing file");
-    as->playAudioBlocking(file_name); 
+
+    #if defined(ESP32) || defined(ESP8266)
+        as->playAudioBlocking(file_name); 
+    #endif
 }
 ```
 
