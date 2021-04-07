@@ -98,3 +98,10 @@ void recordAndPlayBack() {
     Serial.println("Playing file");
     as->playAudioBlocking(file_name); 
 }
+
+
+# Schematic (Only for recording)
+
+![SD_Card_MIC_ESP32_Module](https://user-images.githubusercontent.com/49995349/113864691-7527f500-97c0-11eb-8b2c-52f717252f21.png)
+
+![SD_Card_MIC_ESP32](https://user-images.githubusercontent.com/49995349/113864699-78bb7c00-97c0-11eb-98b8-7b3f08c90e56.png)
